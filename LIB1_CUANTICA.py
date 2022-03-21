@@ -1,5 +1,6 @@
 import numpy as np
 import math
+import matplotlib.pyplot as plt
 from sys import stdin
 
 class cuantico:
@@ -64,7 +65,6 @@ class deterministico:
 
 if __name__ == '__main__':
     #deterministico
-
     booleanmatriz = [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,1,0,0,0,1],[0,0,0,1,0,0],[0,0,1,0,0,0],[1,0,0,0,1,0]]
     estado =np.transpose([3,2,5,9,0,7])
     ticks = stdin.readline().strip()
@@ -91,3 +91,14 @@ if __name__ == '__main__':
     print(probabilidad)
 
     #HACER UN PRINT DE UN DIAGRAMA DE BARRAS
+    eje_x = []
+    for i in range (len(probabilidad)):
+        eje_x.append(i)
+    eje_y = []
+    for i in probabilidad:
+        eje_y.append(i*100)
+    plt.bar(eje_x,eje_y)
+    plt.ylabel("Probabilidad (%)")
+    plt.xlabel('posiciones')
+    plt.title("Probabilidades de estado")
+    plt.savefig("Barras Probabilisticas.jpg")
