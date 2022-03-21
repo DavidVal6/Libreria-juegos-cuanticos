@@ -2,7 +2,7 @@
 
 Esta libreria esta hecha con el fin de hacer pruebas sobre juegos ya sean deterministicos, probabilisticos o cuanticos
 
-##Para usar la libreria
+### Para usar la libreria
 
 Se requiere tener instalado numpy y matplotlib estas se pueden instalar pip install --nombre de liberria--
 
